@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog da Hcode</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="blog">
+
+        <header>
+
+            <div class="container">
+
+                <nav class="navbar">
+
+                    <a href="#" class="text-center logo">
+                        <img src="./assets/img/logo.svg" alt="Hcode Treinamentos">
+                        Blog
+                    </a>
+
+                    <a href="#" id="" value="0"></a>
+                    
+                    <a href="#" @click="login" class="login bg-primary text-white">Fazer login</a>
+
+                    <label style="" id="labelLogin" value="0"></label>
+                </nav>
+            </div>
+
+        </header>
+
+        <section class="posts">
+
+            <div class="container">
+
+                <div class="row post-item">
+
+                    <artigo-1></artigo-1>
+
+                </div>
+
+                <div class="row post-item">
+
+                    <artigo-2></artigo-2>
+                </div>
+
+                <div class="row post-item">
+
+                    <artigo-3></artigo-3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p class="text-center">Visite: <a href="https://youtube.com/hcodebrasil">Hcode Treinamentos</a></p>
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <script src="assets/scripts/index.js"></script>
+</body>
+
+</html>
