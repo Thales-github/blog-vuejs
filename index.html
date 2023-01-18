@@ -26,11 +26,14 @@
                         Blog
                     </a>
 
-                    <a href="#" id="" value="0"></a>
-                    
-                    <a href="#" @click="login" class="login bg-primary text-white">Fazer login</a>
+                    <div class="login" v-if="isLogged" key="logged">
+                        <h4>Seja bem-vindo(a) {{userName}}</h4>
+                        <a href="#" @click.prevent="login" class="logout bg-danger text-white">Fazer Logout</a>
+                    </div>
 
-                    <label style="" id="labelLogin" value="0"></label>
+                    <a href="#" @click.prevent="login" v-else key="notLogged" class="login bg-primary text-white">Fazer
+                        login</a>
+
                 </nav>
             </div>
 
@@ -40,20 +43,18 @@
 
             <div class="container">
 
-                <div class="row post-item">
+                <div class="row post-item" v-for="post in posts">
 
-                    <artigo-1></artigo-1>
+                    <div class="col-11">
 
-                </div>
+                        <!-- adicionamos v-bind:atributo quando estamos percorrendo um laço para o Vue entender o valor da propriedade como uma variável -->
+                        <img v-bind:src="post.img" v-bind:alt="post.imgTitle">
+                        <h2>{{post.title}}</h2>
+                        <p class="artigo">
+                            {{post.post}}
+                        </p>
 
-                <div class="row post-item">
-
-                    <artigo-2></artigo-2>
-                </div>
-
-                <div class="row post-item">
-
-                    <artigo-3></artigo-3>
+                    </div>
 
                 </div>
 
